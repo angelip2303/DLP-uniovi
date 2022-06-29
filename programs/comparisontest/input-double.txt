@@ -1,0 +1,24 @@
+void main() {
+	double a, b;
+	a = 1.1;
+	b = 2.2;
+
+    if (a > b) {
+        write 'a';
+    }
+    if (a >= b) {
+        write 'b';
+    }
+    if (a < b) {
+        write 'c';
+    }
+    if (a <= b) {
+        write 'd';
+    }
+    if (a == b) {
+        write 'e';
+    }
+    if (a != b) {
+        write 'f';
+    }
+}

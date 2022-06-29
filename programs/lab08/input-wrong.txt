@@ -1,0 +1,13 @@
+int integer;
+char character;
+double real, integer; // * Error 1
+
+void p(int a) {
+  char a;             // * Error 2
+}
+
+void main() {
+  double character;
+  read integer, i;    // * Error 3
+  f();                // * Error 4
+}

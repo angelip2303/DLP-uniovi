@@ -1,0 +1,46 @@
+#source "input-char.txt"
+
+
+' Invocation to the main function
+call main
+halt
+
+
+#line 1
+
+ main:
+	' * Parameters
+	' * Local variables
+	' * char a (offset -1)
+	' * char b (offset -2)
+	enter 2
+
+#line 3
+	push bp
+	pushi -1
+	addi
+	pushb 49
+	storeb
+
+#line 4
+	push bp
+	pushi -2
+	addi
+	pushb 50
+	storeb
+
+#line 6
+	' * Write
+	push bp
+	pushi -1
+	addi
+	loadb
+	b2i
+	push bp
+	pushi -2
+	addi
+	loadb
+	b2i
+	modi
+	outi
+	ret 0, 2, 0

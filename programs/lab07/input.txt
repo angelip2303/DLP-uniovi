@@ -1,0 +1,17 @@
+
+double f(int e) {
+  return (double)e;
+}
+
+
+// * Main program
+void main() {
+  int i,a,j;
+  double[10] v;
+  
+  a = 0;
+  i = 0;
+  j = -i*a-2;  
+  v[ (int)(v[j]) ] = a;
+  write 'f', '(', 'i', ')', '=' ,f(i);
+}

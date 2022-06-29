@@ -1,0 +1,16 @@
+#source "input.txt"
+
+	' * record(([10, double] a) ([10, double] e) (char d) (char c) (int b) (int a)) record (offset 0)
+
+' Invocation to the main function
+call main
+halt
+
+
+#line 7
+
+ main:
+	' * Parameters
+	' * Local variables
+	enter 0
+	ret 0, 0, 0

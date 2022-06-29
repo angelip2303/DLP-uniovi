@@ -1,0 +1,17 @@
+// Lvalue required
+
+int f() {
+	int a;
+	a = 0;
+	return a;
+}
+void main() {
+	int i;
+	(i+2) = 3;			// error
+	3 = 2;				// error
+	i > 3 = i;			// error
+	-i = 1;				// error
+	!i = 0;				// error
+	f() = i;			// error
+	((double)i) = 0;	// error
+}

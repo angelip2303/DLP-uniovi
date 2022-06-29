@@ -1,0 +1,21 @@
+
+int i;
+
+int f(int a) {
+  double a;       // * Error 1
+  return 34.5;  // * Error 2
+}
+
+void g(int b, double b) { // * Error 3
+  return 3; // * Error 4
+}
+
+void g() {	// * Error 5
+}
+
+void main() {
+  f();       // * Error 6
+  f(3.2);    // * Error 7
+  i=g();     // * Error 8
+}
+

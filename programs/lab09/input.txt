@@ -1,0 +1,94 @@
+struct { 
+  int integer;
+  char character;
+} pair;
+
+struct {
+  struct { int age; } [2] employees;
+} [2] acme;
+
+int[8][3] fibonacci;
+
+//-------------------------------
+
+void p() {}
+
+int f(double r, int e) {
+  double real;
+  char c;
+  int result;
+  real = r * 10.0;
+  c='0';
+  if (e < 256) {
+    c = (char)e;
+    result = (int)c;
+  }
+  else 
+    result = (int)real;
+  return result;
+}
+
+void initialize() {
+  int i;
+  fibonacci[0][0] = 0;
+  fibonacci[0][1] = 1;
+  fibonacci[0][2] = 1;
+  i = 1;
+  while(i < 8) {
+    fibonacci[i][0] = fibonacci[i - 1][1];
+    fibonacci[i][1] = fibonacci[i - 1][2];
+    fibonacci[i][2] = fibonacci[i][0] + fibonacci[i][1];
+    i = i + 1;
+  }
+}
+
+//-------------------------------
+
+void main(){
+  int i, j;
+  p();
+  i=0;
+  pair.character='0';
+  pair.integer=(int)'0';
+
+  // * Shows 48 (decimal value of '0')
+  write f((double)i, (int)(pair.character)), '\n';
+  f(1.3, 2); 
+
+  initialize(); 
+  i = 0;
+  while(i < 8) {
+    // Shows the Fib sequence, from 1 to 8 (34)
+    write '(', i + 1, ')', fibonacci[i][0], 
+          '+', fibonacci[i][1] , '=' ,
+          fibonacci[i][2] , '\n';
+    i = i + 1;
+  }
+
+  acme[1].employees[1].age = 56;
+  // Shows 56
+  write acme[1].employees[1].age, '\n';
+  i = 0;
+  while (i<2) {
+    j = 0;
+    while (j<2) {
+      acme[i].employees[j].age = i + j;
+      j = j+ 1;
+    }
+    i= i + 1;
+  }
+
+
+  i = 0;
+  while (i<2) {
+    j = 0;
+    while (j<2) {
+      // Shows 0 1 1 2
+      write acme[i].employees[j].age, ' ';
+      j = j+ 1;
+    }
+    i= i + 1;
+  }
+
+}
+

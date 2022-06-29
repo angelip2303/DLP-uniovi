@@ -1,0 +1,169 @@
+#source "input-int.txt"
+
+
+' Invocation to the main function
+call main
+halt
+
+
+#line 1
+
+ main:
+	' * Parameters
+	' * Local variables
+	' * int a (offset -2)
+	' * int b (offset -4)
+	enter 4
+
+#line 3
+	push bp
+	pushi -2
+	addi
+	pushi 1
+	storei
+
+#line 4
+	push bp
+	pushi -4
+	addi
+	pushi 2
+	storei
+	' * If statement
+
+#line 6
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	gti
+	jz label0
+	' * Body of the if branch
+
+#line 7
+	' * Write
+	pushb 97
+	outb
+	jmp label1
+ label0:
+	' * Body of the else branch
+ label1:
+	' * If statement
+
+#line 9
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	gei
+	jz label2
+	' * Body of the if branch
+
+#line 10
+	' * Write
+	pushb 98
+	outb
+	jmp label3
+ label2:
+	' * Body of the else branch
+ label3:
+	' * If statement
+
+#line 12
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	lti
+	jz label4
+	' * Body of the if branch
+
+#line 13
+	' * Write
+	pushb 99
+	outb
+	jmp label5
+ label4:
+	' * Body of the else branch
+ label5:
+	' * If statement
+
+#line 15
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	lei
+	jz label6
+	' * Body of the if branch
+
+#line 16
+	' * Write
+	pushb 100
+	outb
+	jmp label7
+ label6:
+	' * Body of the else branch
+ label7:
+	' * If statement
+
+#line 18
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	eqi
+	jz label8
+	' * Body of the if branch
+
+#line 19
+	' * Write
+	pushb 101
+	outb
+	jmp label9
+ label8:
+	' * Body of the else branch
+ label9:
+	' * If statement
+
+#line 21
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	nei
+	jz label10
+	' * Body of the if branch
+
+#line 22
+	' * Write
+	pushb 102
+	outb
+	jmp label11
+ label10:
+	' * Body of the else branch
+ label11:
+	ret 0, 4, 0

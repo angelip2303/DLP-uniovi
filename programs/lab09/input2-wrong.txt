@@ -1,0 +1,10 @@
+struct  { 
+  int day;
+  int month;
+  double day; // * Error 1
+} date;
+
+void main() {
+  read date.year; // * Error 2
+}
+

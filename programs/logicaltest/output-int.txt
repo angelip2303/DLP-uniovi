@@ -1,0 +1,57 @@
+#source "input-int.txt"
+
+
+' Invocation to the main function
+call main
+halt
+
+
+#line 1
+
+ main:
+	' * Parameters
+	' * Local variables
+	' * int a (offset -2)
+	' * int b (offset -4)
+	enter 4
+
+#line 3
+	push bp
+	pushi -2
+	addi
+	pushi 1
+	storei
+
+#line 4
+	push bp
+	pushi -4
+	addi
+	pushi 0
+	storei
+
+#line 6
+	' * Write
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	or
+	outi
+
+#line 7
+	' * Write
+	push bp
+	pushi -2
+	addi
+	loadi
+	push bp
+	pushi -4
+	addi
+	loadi
+	and
+	outi
+	ret 0, 4, 0
